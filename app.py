@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 import pandas as pd
 import joblib
 
@@ -22,9 +22,9 @@ if st.button('Predict'):
     
     # Make prediction
     prediction = model.predict(input_data)
-     # Display the result
+    
+    # Display the result
     if prediction[0] == 1:
-        st.warning('High risk of heart disease! ')
+        st.warning('High risk of heart disease! ⚠️')
     else:
-      st.success('Low risk of heart disease.')
-      st.success('Low risk of heart disease.')
+        st.success('Low risk of heart disease. ✅')
