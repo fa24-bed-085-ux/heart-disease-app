@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# Load the trained model using the exact filename present in your GitHub repository
-model = joblib.load('svc_trained_model.pkl')
+# Load the correct Heart Disease model
+model = joblib.load('heart_model.pkl')
 
 st.title('Heart Disease Prediction App')
 st.write('Enter the patient details below to check the prediction:')
@@ -16,7 +16,7 @@ max_hr = st.number_input('Maximum Heart Rate Achieved', min_value=50, max_value=
 
 # Prediction button
 if st.button('Predict'):
-    # Convert input data into a DataFrame
+    # Convert input data into a DataFrame with correct feature names
     input_data = pd.DataFrame([[age, sex, cholesterol, max_hr]], 
                               columns=['Age', 'Sex', 'Cholesterol', 'MaxHR'])
     
