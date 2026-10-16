@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load('heart_model.pkl')
+# Load the model using the exact filename already uploaded on GitHub
+model = joblib.load('svc_trained_model.pkl')
 
 st.title('Heart Disease Prediction App')
 st.write('Enter the patient details below to check the prediction:')
