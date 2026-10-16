@@ -27,4 +27,4 @@ if st.button('Predict'):
         st.warning('High risk of heart disease! ')
     else:
       st.success('Low risk of heart disease.')
-        st.success('Low risk of heart disease. ✅')
+      st.success('Low risk of heart disease.')
